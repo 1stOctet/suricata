@@ -447,6 +447,7 @@ fn dns_log_json_answer_detail(answer: &DNSAnswerEntry) -> Json
 
 fn dns_log_json_answer(response: &DNSResponse, flags: u64) -> Json
 {
+    println!("rust 450 rust");
     let header = &response.header;
     let js = Json::object();
 
@@ -552,7 +553,7 @@ fn dns_log_json_answer(response: &DNSResponse, flags: u64) -> Json
         }
         js.set("authorities", js_auth);
     }
-
+    println!("rust 556 rust");
     return js;
 }
 
